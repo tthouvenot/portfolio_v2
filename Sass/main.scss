@@ -1,6 +1,120 @@
+// Reset
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+// Variables
+
+$primaryColor: #2B304D;
+$secondaryColor: #3F4364;
+$tertiaryColor: #626B96;
+$textColor: #F5F5F5;
+$ctaColor:#EFAA75;
+$validColor: #63A375;
+$cancelColor: #D1495B;
+
+
+// Main
+body{
+    background-color: $primaryColor;
+    color: $textColor;
+}
+
+p{
+    font-family: "Raleway", sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6{
+    font-family: "Josefin Sans", sans-serif;
+}
+
+a{
+    text-decoration: none;
+    color: $textColor;
+}
+
+ul, ol{
+    list-style: none;
+}
+
+// Header
+
+.header{
+    height: 8rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__title{
+        width: 30%;
+        display: flex;
+        padding-left: 2rem;
+    }
+    
+    &__menu_container{
+        width: 60%;
+        height: 100%;
+    }
+    
+    &__menu_content{
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        gap: 2rem;       
+        
+        & li{
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        & a{
+            width: 100%;
+            transition: all 0.5s ease-in-out;
+        }
+        & a:hover{ // TODO gérer la page active en JS
+            transform: scale(1.5);
+            border-bottom: $ctaColor solid 1px;
+            color: $ctaColor;
+        }
+    }
+
+    &__lang{
+        height: 100%;
+        width: 15%;
+        display: flex;
+        justify-content: end;
+        align-items: center;
+        
+        &--fr{
+            width:50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-right: solid 1px $textColor;
+        }
+
+        &--eng{
+            width:50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        & a{
+            transition: all 0.5s ease-in-out;
+        }
+
+        & a:hover{
+            transform: scale(1.5);
+            border-bottom: $ctaColor solid 1px;
+            color: $ctaColor;
+        }
+    }
+}
